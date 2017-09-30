@@ -15,10 +15,10 @@ static uint32_t timer = millis();
 void setup() {
   Serial.begin(115200);
   // motor pin assignment
-  ESC0.attach(10);//front left
-  ESC1.attach(11);//front right
-  ESC2.attach(12);//back left
-  ESC3.attach(13);//back right
+  ESC0.attach(10);//front left CW
+  ESC1.attach(11);//front right CCW
+  ESC2.attach(12);//back left CCW
+  ESC3.attach(13);//back right CW
   
   // sequence required to initialize the
   // little bee heli ESC and set the max
