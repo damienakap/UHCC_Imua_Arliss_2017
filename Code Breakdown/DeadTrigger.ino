@@ -13,7 +13,7 @@ const int DeadSwitchPin = 6;
 #endif
 
 void setup() {
-  Serial.begin(DeadSwitchPin);
+  Serial.begin(115200);
   pinMode(buttonPin, INPUT_PULLUP); // use pull-up resistor input
 }
 
