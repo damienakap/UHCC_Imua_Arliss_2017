@@ -62,7 +62,7 @@ void updateAccel(){
   return;
 }
 
-void updateGyro(){
+void updateMag(){
   mag.getEvent(&event);
   imu_mag_x = event.magnetic.x; // uT
   imu_mag_y = event.magnetic.y; // uT
@@ -70,7 +70,7 @@ void updateGyro(){
   return;
 }
 
-void updateMag(){
+void updateGyro(){
   gyro.getEvent(&event);
   imu_gyro_x = event.gyro.x; // uT
   imu_gyro_y = event.gyro.y; // uT
