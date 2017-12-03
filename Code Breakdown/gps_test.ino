@@ -49,7 +49,7 @@ void setup()
   GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_RMCGGA);
   //GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_RMCONLY);
   GPS.sendCommand(PMTK_SET_NMEA_UPDATE_1HZ);
-  /GPS.sendCommand(PMTK_SET_NMEA_UPDATE_10HZ);
+  //GPS.sendCommand(PMTK_SET_NMEA_UPDATE_10HZ);
   GPS.sendCommand(PGCMD_ANTENNA);
   delay(1000);
   // Ask for firmware version
@@ -79,7 +79,7 @@ void loop(){
     // Print raw string
     if (GPSECHO)
       if (c) Serial.print(c);
-  }
+  
   if (GPS.newNMEAreceived()){
     if (!GPS.parse(GPS.lastNMEA()))   // this also sets the newNMEAreceived() flag to false
       return;
