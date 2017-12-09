@@ -1,0 +1,76 @@
+
+Feather M0 Adalogger setup:
+
+	In the Arduino IDE window:
+	
+	1) File > Preferences
+	2) add "https://adafruit.github.io/arduino-board-index/package_adafruit_index.json"
+		to the "Additional Boards Manager URLs:" field.
+	3) Click ok.
+	
+	4) Tools > Board > Board Manager
+	5) Install "Adafruit SAMD Boards"
+	6) Tools > Board > Adafruit Feather M0
+	
+	In your code:
+		1) You may need to add the following lines just above the first function 
+		in order to use Serial:
+		
+			#if defined(ARDUINO_SAMD_ZERO) && defined(SERIAL_PORT_USBVIRTUAL)
+			  // Required for Serial on Zero based boards
+			  #define Serial SERIAL_PORT_USBVIRTUAL
+			#endif
+		
+		2) If you want to track ram availability:
+		
+			extern "C" char *sbrk(int i);
+			
+			int FreeRam () {
+			  char stack_dummy = 0;
+			  return &stack_dummy - sbrk(0);
+			}
+
+Adafruit 10-DOF IMU Breakout Setup:
+	
+	1) install libraries from github as zip files: "Clone or download" > Download ZIP
+	
+	Adafruit Sensor: https://github.com/adafruit/Adafruit_Sensor
+		Basic Sensor Library
+	LSM303DLHC: https://github.com/adafruit/Adafruit_LSM303DLHC
+		Accelarometer and Magnetometer
+	L3GD20: https://github.com/adafruit/Adafruit_L3GD20_U
+		Gyroscope
+	BMP180: https://github.com/adafruit/Adafruit_BMP085_Unified
+		Barometer
+	Adafruit 10DOF: https://github.com/adafruit/Adafruit_10DOF
+		The combined library for the 10DOF IMU
+	
+	Note: For details go to:
+		https://learn.adafruit.com/adafruit-10-dof-imu-breakout-lsm303-l3gd20-bmp180/connecting-it-up?view=all#software
+	
+		Also Look at the examples provided in the Adafruit IDE: File > Examples 
+		
+Adafruit Ultimate GPS Breakout v3 Setup:
+	
+	1) install libraries from github as zip files: "Clone or download" > Download ZIP
+	
+	Adafruit Ultimate GPS: https://github.com/adafruit/Adafruit_GPS
+	
+	Note: For details go to:
+		https://learn.adafruit.com/adafruit-ultimate-gps/circuitpython-parsing?view=all#arduino-wiring
+		
+		Also Look at the examples provided in the Adafruit IDE: File > Examples
+	
+SD Card on Adafruit Feather M0 Adalogger:
+	See: https://learn.adafruit.com/adafruit-feather-m0-adalogger/using-the-sd-card
+	Provides a great description of what goes on.
+	
+	Copy the code in the provided exaples to try out the SD card.
+	
+	Notes:
+		1) Make sure you have an SD card inserted in the Feather M0 or you it will return errors.
+		2) You may need to create a log file manually. Simply insert the SD card into your 
+			computer (may need a USB adapter) and create a new text file with the same name as set
+			in your code. "ANALOG00.TXT" if you are using the example code from the Adafruit website.
+	
+	
