@@ -29,6 +29,8 @@ Feather M0 Adalogger setup:
 			  char stack_dummy = 0;
 			  return &stack_dummy - sbrk(0);
 			}
+	Note:
+		For more details, go to: https://learn.adafruit.com/adafruit-feather-m0-adalogger/overview
 
 Adafruit 10-DOF IMU Breakout Setup:
 	
