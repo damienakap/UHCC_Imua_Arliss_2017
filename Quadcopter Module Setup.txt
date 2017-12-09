@@ -45,6 +45,8 @@ Adafruit 10-DOF IMU Breakout Setup:
 	Adafruit 10DOF: https://github.com/adafruit/Adafruit_10DOF
 		The combined library for the 10DOF IMU
 	
+	2) Add the library to the Arduino IDE: Sketch > Include Library > Add .ZIP Library
+	
 	Note: For details go to:
 		https://learn.adafruit.com/adafruit-10-dof-imu-breakout-lsm303-l3gd20-bmp180/connecting-it-up?view=all#software
 	
@@ -56,16 +58,19 @@ Adafruit Ultimate GPS Breakout v3 Setup:
 	
 	Adafruit Ultimate GPS: https://github.com/adafruit/Adafruit_GPS
 	
+	2) Add the library to the Arduino IDE: Sketch > Include Library > Add .ZIP Library
+	
 	Note: For details go to:
 		https://learn.adafruit.com/adafruit-ultimate-gps/circuitpython-parsing?view=all#arduino-wiring
 		
 		Also Look at the examples provided in the Adafruit IDE: File > Examples
 	
 SD Card on Adafruit Feather M0 Adalogger:
+
 	See: https://learn.adafruit.com/adafruit-feather-m0-adalogger/using-the-sd-card
 	Provides a great description of what goes on.
 	
-	Copy the code in the provided exaples to try out the SD card.
+	Copy the code in the provided examples to try writing out to the SD card.
 	
 	Notes:
 		1) Make sure you have an SD card inserted in the Feather M0 or you it will return errors.
